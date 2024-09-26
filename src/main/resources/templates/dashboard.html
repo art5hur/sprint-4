@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard de Treinamentos</title>
+<link rel="stylesheet" href="/css/dashboard.css">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
+
+</head>
+<body>
+	<div class="container">
+		<nav class="sidebar">
+			<div class="logo">
+				<img src="images/logo2.png" alt="Eurofarma">
+			</div>
+			<ul>
+				<li><a href="#">Dashboard</a></li>
+				<li><a href="#">Meus Treinamentos</a></li>
+				<li><a href="#">Exercícios</a></li>
+				<li><a href="#">Fórum</a></li>
+				<li><a href="#">Minha Conta</a></li>
+			</ul>
+		</nav>
+
+		<main class="main-content">
+			<header>
+				<div class="top-bar">
+					<input type="text" placeholder="Pesquisar treinamentos...">
+					<div class="user-menu">
+						<a href="#">Pendências</a> <a href="#">Meus Treinamentos</a> <i
+							class="bi bi-bell"></i> <i class="bi bi-heart"></i> <i
+							class="bi bi-person"></i>
+					</div>
+				</div>
+			</header>
+
+			<section class="dashboard-container">
+				<div class="treinamentos-pendentes">
+					<h2>Exercícios Pendentes</h2>
+					<ul>
+						<li>Cap. 1 - Curso de ITIL Foundation (Hoje)</li>
+						<li>Cap. 9 - Curso de Farmácia Industrial (1 dia atrás)</li>
+					</ul>
+					<button>Abrir APP</button>
+					<button>Abrir Notificações</button>
+				</div>
+
+				<div class="treinamentos-andamento">
+					<h2>Treinamentos em Andamento</h2>
+					<table>
+						<tr>
+							<th>Treinamento</th>
+							<th>Progresso</th>
+						</tr>
+						<tr>
+							<td>Curso de Farmácia Industrial</td>
+							<td>92%</td>
+						</tr>
+						<tr>
+							<td>Curso de Gestão de Performance com Indicadores KPIs</td>
+							<td>50%</td>
+						</tr>
+						<tr>
+							<td>Curso de ITIL Foundation</td>
+							<td>9%</td>
+						</tr>
+					</table>
+					<button>Lista de Treinamentos</button>
+				</div>
+				<div class="chatbot">
+					<a href="#"> 
+					<img src="images/eurotron.png" alt="Eurotron">
+					</a>
+					<p>Fale com o Eurotron</p>
+				</div>
+
+			</section>
+		</main>
+	</div>
+
+</body>
+</html>

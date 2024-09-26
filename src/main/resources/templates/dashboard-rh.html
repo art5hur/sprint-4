@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análise dos Treinamentos - RH</title>
+    <link rel="stylesheet" href="/css/dashboard-rh.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <nav class="sidebar">
+            <div class="logo">
+                <img src="images/logo2.png" alt="Eurofarma">
+            </div>
+            <ul>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">Gerenciar Treinamentos</a></li>
+                <li><a href="#">Exercícios</a></li>
+                <li><a href="#">Fórum</a></li>
+                <li><a href="#">Colaboradores</a></li>
+                <li><a href="#">Configurações</a></li>
+            </ul>
+        </nav>
+
+        <main class="main-content">
+            <header>
+                <div class="top-bar">
+                    <input type="text" placeholder="Pesquisar treinamentos...">
+                    <div class="user-menu">
+                        <a href="/funcionarios">Cadastrar Funcionário</a>
+                        <a href="/treinamentos/add">Cadastrar Treinamento</a>
+                        <i class="bi bi-bell"></i>
+                        <i class="bi bi-heart"></i>
+                        <i class="bi bi-person"></i>
+                    </div>
+                </div>
+            </header>
+            
+            <section class="dashboard-rh">
+                <div class="resumo-treinamentos">
+                    <h2>Resumo dos Treinamentos</h2>
+                    <div class="chart-container">
+                        <div class="chart">
+                            <canvas id="chartCertificados"></canvas>
+                            <p>Certificados</p>
+                        </div>
+                        <div class="chart">
+                            <canvas id="chartEmAndamento"></canvas>
+                            <p>Em andamento</p>
+                        </div>
+                        <div class="chart">
+                            <canvas id="chartRealizados"></canvas>
+                            <p>Realizados</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="treinamentos-populares">
+                    <h2>Treinamentos mais populares</h2>
+                    <table>
+                        <tr>
+                            <th>Treinamento</th>
+                            <th>Realizados</th>
+                        </tr>
+                        <tr>
+                            <td>Curso de ITIL Foundation</td>
+                            <td>59</td>
+                        </tr>
+                        <tr>
+                            <td>Curso de Farmácia Industrial</td>
+                            <td>180</td>
+                        </tr>
+                        <tr>
+                            <td>Curso de ITIL Foundation</td>
+                            <td>69</td>
+                        </tr>
+                        <tr>
+                            <td>Curso de Farmácia Industrial</td>
+                            <td>78</td>
+                        </tr>
+                        <tr>
+                            <td>Curso de ITIL Foundation</td>
+                            <td>120</td>
+                        </tr>
+                    </table>
+                    <a href="/treinamentos"> Lista de Treinamentos</a>
+                </div>
+                <div class="chatbot">
+                    <a href="#"> 
+                        <img src="images/eurotron.png" alt="Eurotron">
+                    </a>
+                    <p>Fale com o Eurotron</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script>
+    function createDoughnutChart(ctx, data, width, height) {
+        ctx.canvas.width = width;
+        ctx.canvas.height = height;
+        return new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                datasets: [{
+                    data: data,
+                    backgroundColor: ['#0056b3', '#e0e0e0'],
+                    borderWidth: 0
+                }]
+            },
+            options: {
+                cutout: '70%',
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        enabled: false
+                    }
+                },
+                responsive: false,
+                maintainAspectRatio: false
+            }
+        });
+    }
+
+    const ctxCertificados = document.getElementById('chartCertificados').getContext('2d');
+    const ctxEmAndamento = document.getElementById('chartEmAndamento').getContext('2d');
+    const ctxRealizados = document.getElementById('chartRealizados').getContext('2d');
+
+    createDoughnutChart(ctxCertificados, [65, 35], 80, 80);
+    createDoughnutChart(ctxEmAndamento, [80, 20], 80, 80);
+    createDoughnutChart(ctxRealizados, [50, 50], 80, 80);
+    </script>
+</body>
+</html>

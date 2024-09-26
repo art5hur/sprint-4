@@ -1,0 +1,38 @@
+<!-- src/main/resources/templates/login.html -->
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Eurofarma</title>
+    <link rel="stylesheet" th:href="@{/css/login.css}">
+</head>
+<body>
+
+    <th:block th:replace="layout/header :: header"></th:block>
+	
+	<div th:fragment="loginForm">
+    <div th:if="${errorMessage}" class="alert alert-danger" role="alert">
+        <span th:text="${errorMessage}"></span>
+    </div>
+    
+    <div th:if="${logoutMessage}" class="alert alert-success" role="alert">
+        <span th:text="${logoutMessage}"></span>
+    </div>
+	
+    <div class="login-container">
+        <img src="/images/logo.png" alt="Eurofarma Logo">
+        <h2>Bem-vindo ao Portal Eurofarma</h2>
+        <form th:action="@{/login}" method="post">
+            <input type="email" name="username" placeholder="E-mail" required>
+            <input type="password" name="password" placeholder="Senha" required>
+            <button type="submit">Entrar</button>
+        </form>
+        <a href="#">Esqueceu sua senha?</a>
+    </div>
+
+    <th:block th:replace="layout/footer :: footer"></th:block>
+
+</body>
+</html>

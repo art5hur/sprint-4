@@ -1,0 +1,251 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Cor de fundo do header */
+header{
+	
+}
+
+.navbar {
+    background-color: #fff200 !important;
+    padding: 10px;
+}
+
+.navbar img {
+    height: 30px;
+    max-height: 30px;
+    padding: 10px;	
+}
+
+
+body {
+    background-color: #f8f9fa; 
+}
+
+.navbar .navbar-brand {
+    display: flex;
+    align-items: center;
+    background-color: #fff200
+}
+
+.navbar .navbar-brand i {
+    margin-left: 10px;
+    font-size: 24px;
+    color: black;
+}
+
+
+.login-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 40px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.login-container img {
+    width: 150px;
+    margin-bottom: 30px;
+}
+
+.login-container h2 {
+    margin-bottom: 20px;
+    color: #00488E;
+}
+
+.login-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-container input[type="email"],
+.login-container input[type="password"] {
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.login-container button {
+    padding: 12px;
+    background-color: #00488E; 
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.login-container button:hover {
+    background-color: #0056b3;
+}
+
+.login-container a {
+    display: block;
+    margin-top: 15px;
+    color: #fff;
+    text-decoration: none;
+}
+
+
+.login-container a:hover {
+    text-decoration: underline;
+}
+
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.alert-danger {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+}
+
+.alert-success {
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+}
+
+
+
+
+
+
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+p {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    background-color: #00488E;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+a:hover {
+    background-color: #0056b3;
+}
+
+
+footer {
+    text-align: center;
+    background-color: #fff200;
+    color: #002f87;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+
+
+
+.dashboard-container {
+    width: 80%;
+    margin: 20px auto;
+}
+
+.dashboard-container h2 {
+    margin-bottom: 20px;
+    font-size: 22px;
+    color: #333;
+}
+
+.treinamentos-pendentes,
+.treinamentos-andamento {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.treinamentos-pendentes ul {
+    list-style: none;
+    padding: 0;
+}
+
+.treinamentos-pendentes ul li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.treinamentos-pendentes ul li:last-child {
+    border-bottom: none;
+}
+
+.treinamentos-pendentes button {
+    margin-right: 10px;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.treinamentos-pendentes button:hover {
+    background-color: #0056b3;
+}
+
+.treinamentos-andamento table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.treinamentos-andamento table th,
+.treinamentos-andamento table td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+    font-size: 16px;
+}
+
+.treinamentos-andamento table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+.treinamentos-andamento table td {
+    background-color: #fff;
+}
+
+.treinamentos-andamento button {
+    margin-top: 20px;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.treinamentos-andamento button:hover {
+    background-color: #0056b3;
+}
+
+

@@ -1,0 +1,52 @@
+.navbar {
+    background-color: #fff200 !important;
+    padding: 10px;
+}
+
+nav {
+    display: block;
+    unicode-bidi: isolate;
+}
+
+.navbar img {
+    height: 60px;
+    padding: 10px;
+}
+
+img {
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+
+a {
+	background-color: #00488E;
+	border-radius: 10px;
+	margin: 4px;
+}
+
+h2 {
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    unicode-bidi: isolate;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.navbar-light .navbar-nav .nav-link {
+    color: white;
+}
