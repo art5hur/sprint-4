@@ -10,7 +10,7 @@ public class FormTreinamento {
     private String instrutor;
     private String data;
 
-   
+    
 
     public Long getId() {
 		return id;
@@ -60,6 +60,8 @@ public class FormTreinamento {
 		this.data = data;
 	}
 
+	
+	
 	public FormTreinamento toForm(Treinamento treinamento) {
         this.id = treinamento.getId();
         this.nome = treinamento.getNome();
@@ -80,4 +82,14 @@ public class FormTreinamento {
         treinamento.setData(this.data);
         return treinamento;
     }
+
+    // Método para atualizar os dados de um treinamento existente
+    public void updateModel(Treinamento treinamento) {
+        treinamento.setNome(this.nome);
+        treinamento.setDescricao(this.descricao);
+        treinamento.setInstrutor(this.instrutor);
+        treinamento.setArea(this.area);
+        treinamento.setData(this.data);
+    }
 }
+

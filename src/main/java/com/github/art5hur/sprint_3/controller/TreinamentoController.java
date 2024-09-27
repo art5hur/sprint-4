@@ -31,10 +31,22 @@ public class TreinamentoController {
 
     @PostMapping("save")
     public String save(@ModelAttribute FormTreinamento formTreinamento) {
-        Treinamento treinamento = formTreinamento.toModel();
+        Treinamento treinamento;
+        
+        // Se o ID já existir, busca o treinamento no banco e o atualiza.
+        if (formTreinamento.getId() != null) {
+            treinamento = treinamentoRepository.findById(formTreinamento.getId())
+                        .orElse(new Treinamento());
+            formTreinamento.updateModel(treinamento);
+        } else {
+            // Se não, cria um novo
+            treinamento = formTreinamento.toModel();
+        }
+        
         treinamentoRepository.save(treinamento);
         return "redirect:/treinamentos";
     }
+
 
     @GetMapping("add")
     public String create(Model model) {

@@ -4,51 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Treinamentos</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">    
     <link rel="stylesheet" href="/css/treinamento.css">
 </head>
 <body>
-<div th:replace="layout/header :: headerFragment"></div>
-
-<header>
-    <h2>Cadastro de Treinamentos</h2>
+<header>	 		 			
+	 	<nav class="navbar navbar-expand-sm bg-light" >
+	 		<img src="/images/logo.png" alt="Eurofarma Logo" style="height: 50px;">
+	 	</nav>
 </header>
 
+
 <div class="container">
+	<h2>Cadastro de Treinamentos</h2>
 
-    <form th:action="@{/treinamentos/save}" th:object="${funcionario}" method="post">
-        <div class="form-group">
-            <label for="nome">Nome do Treinamento</label>
-            <input type="text" id="nome" name="nome" class="form-control" required th:value="${treinamento.nome}">
-        </div>
+   <form th:action="@{/treinamentos/save}" th:object="${treinamento}" method="post">
+    <input type="hidden" name="id" th:value="${treinamento.id}">
+    
+    <div class="form-group">
+        <label for="nome">Nome do Treinamento</label>
+        <input type="text" id="nome" name="nome" class="form-control" required th:value="${treinamento.nome}">
+    </div>
 
-        <div class="form-group">
-            <label for="descricao">Descrição do Treinamento</label>
-            <textarea id="descricao" name="descricao" class="form-control" required th:text="${treinamento.descricao}"></textarea>
-        </div>
+    <div class="form-group">
+        <label for="descricao">Descrição do Treinamento</label>
+        <textarea id="descricao" name="descricao" class="form-control" required th:text="${treinamento.descricao}"></textarea>
+    </div>
 
-        <div class="form-group">
-            <label for="data">Data do Treinamento</label>
-            <input type="date" id="data" name="data" class="form-control" required th:value="${treinamento.data}">
-        </div>
+    <div class="form-group">
+        <label for="data">Data do Treinamento</label>
+        <input type="date" id="data" name="data" class="form-control" required th:value="${treinamento.data}">
+    </div>
 
-        <div class="form-group">
-            <label for="instrutor">Instrutor</label>
-            <input type="text" id="instrutor" name="instrutor" class="form-control" required th:value="${treinamento.instrutor}">
-        </div>
+    <div class="form-group">
+        <label for="instrutor">Instrutor</label>
+        <input type="text" id="instrutor" name="instrutor" class="form-control" required th:value="${treinamento.instrutor}">
+    </div>
 
-        <div class="form-group">
-            <label for="area">Área do Treinamento</label>
-            <select id="area" name="area" class="form-control" th:value="${treinamento.area}">
-                <option value="Farmacêutica">Farmacêutica</option>
-                <option value="Gestão">Gestão</option>
-                <option value="Tecnologia">Tecnologia</option>
-            </select>
-        </div>
+    <div class="form-group">
+        <label for="area">Área do Treinamento</label>
+        <select id="area" name="area" class="form-control" th:value="${treinamento.area}">
+            <option value="Farmacêutica">Farmacêutica</option>
+            <option value="Gestão">Gestão</option>
+            <option value="Tecnologia">Tecnologia</option>
+        </select>
+    </div>
 
-        <button type="submit" class="btn btn-primary">Cadastrar Treinamento</button>
-    	<a th:href="@{/treinamentos}" class="btn btn-secondary btn-sm">Cancelar</a>
-    </form>
+    <button type="submit" class="btn btn-primary">Salvar Treinamento</button>
+    <a th:href="@{/treinamentos}" class="btn btn-secondary btn-sm">Cancelar</a>
+</form>
+
 </div>
     <div th:replace="layout/footer :: footerFragment"></div>
 
