@@ -35,18 +35,17 @@ h2 {
     unicode-bidi: isolate;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
 .navbar-light .navbar-nav .nav-link {
     color: white;
+}
+
+.back-to-dashboard {
+    position: absolute;
+    top: 20px;  /* Ajuste de acordo com o espaço da imagem */
+    left: 20px;  /* Distância da margem esquerda */
+}
+
+.back-to-dashboard a {
+    font-size: 1.5em; /* Tamanho do ícone */
+    padding: 10px 15px; /* Ajuste do espaçamento do botão */
 }

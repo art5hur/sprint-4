@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Treinamentos</title>
+    <link rel="stylesheet" href="/css/treinamento.css">
+    
+</head>
+<body>
+    <div class="header">
+        <h1>Lista de Treinamentos</h1>
+
+        <div class="search-filter">
+            <input type="text" placeholder="Buscar por cursos..." class="search-bar" />
+
+            <select class="filter">
+                <option value="todos">Todas as áreas</option>
+                <option value="farmaceutica">Farmacêutica</option>
+                <option value="tecnologia">Tecnologia</option>
+            </select>
+
+            <button class="search-button">Pesquisar</button>
+            <a href="treinamentosRh/add" class="btn-sm btn-primary"><i class="fas fa-plus"></i> Novo Treinamento</a>
+        </div>
+    </div>
+
+    <div class="course-grid">
+    <div class="course-card" th:each="treinamentoRh : ${treinamentosRh}">
+        <h3 th:text="${treinamentoRh.nome}">Nome do Treinamento</h3>
+        <p th:text="${treinamentoRh.descricao}">Descrição do Treinamento</p>
+        <p><strong>Área:</strong> <span th:text="${treinamentoRh.area}">Área do Treinamento</span></p>
+        <p><strong>Instrutor:</strong> <span th:text="${treinamentoRh.instrutor}">Instrutor</span></p>
+        <p><strong>Data:</strong> <span th:text="${treinamentoRh.data}">Data do Treinamento</span></p>
+        
+        <div class="course-actions">
+            <a th:href="@{/treinamentosRh/update/{id}(id=${treinamentoRh.id})}" class="btn btn-warning">Editar</a>
+            <a th:href="@{/treinamentosRh/delete/{id}(id=${treinamentoRh.id})}" class="btn btn-danger">Excluir</a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

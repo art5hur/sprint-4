@@ -48,7 +48,7 @@ h2 {
     border-radius: 5px;
     border: 1px solid #ddd;
 }
-.search-button {
+.search-button, .btn-primary {
 	margin-left: 10px;
 	width: 10%;
     padding: 10px;
@@ -58,7 +58,27 @@ h2 {
     border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
+   	text-decoration: none;
+   	transition: background-color 0.3s ease;    
 }
+.btn-secondary{
+	margin-left: 10px;
+	width: 10%;
+    padding: 10px;
+    background-color: #6c757d;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+   	text-decoration: none;
+   	transition: background-color 0.3s ease;   
+}
+
+a:hover {
+	background-color: #0056b3;
+}
+ 
 
 .search-bar {
     width: 300px;
@@ -122,5 +142,3 @@ h2 {
         .btn-warning:hover, .btn-danger:hover {
             opacity: 0.8;
         }
-  
- 
