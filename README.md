@@ -10,6 +10,7 @@ https://github.com/RenanLeite7/Challenge-eurofarma-app
 - Cadastro de Treinamentos
 - Cadastro de Funcionários
 - Cadastro de Departamentos
+- Listagem de Treinamentos Pendentes
 
 ## Integrantes
 - Arthur Miranda Santos
