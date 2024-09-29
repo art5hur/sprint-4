@@ -1,5 +1,8 @@
-# SPRINT 3
+# SPRINT 4
 Aplicação em MVC da plataforma de treinamentos da Eurofarma (EUROLEARN)
+
+# LINK DO REPOSITÓRIO DO APP: 
+https://github.com/RenanLeite7/Challenge-eurofarma-app
 
 ## Features
 - Dashboard principal (Colaboradores)
@@ -12,4 +15,3 @@ Aplicação em MVC da plataforma de treinamentos da Eurofarma (EUROLEARN)
 - Arthur Miranda Santos
 - Renan Bandeira Leite
 - Thomas D’ávila Meyer Pflug
-# sprint-4
