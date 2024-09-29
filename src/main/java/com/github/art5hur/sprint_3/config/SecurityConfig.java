@@ -25,8 +25,12 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
             .authorizeHttpRequests(auth -> auth
+            	.requestMatchers("/treinamentos", "/treinamentos-pendentes").hasAnyRole("USER", "RH")
                 .requestMatchers("/login", "/css/**", "/images/**").permitAll()
                 .anyRequest().authenticated()
+            )
+            .csrf(csrf -> csrf
+                    .ignoringRequestMatchers("/treinamentos-pendentes") // Ignora CSRF para requisição POST a essa URL
             )
             .formLogin(form -> form
                 .loginPage("/login")

@@ -22,7 +22,7 @@ public class TreinamentoService {
         treinamentoRepository.save(treinamento);
     }
 
-    public List<Treinamento> listarTodos() {
+    public List<Treinamento> listarTodosTreinamentos() {
         return treinamentoRepository.findAll();
     }
 

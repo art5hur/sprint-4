@@ -50,7 +50,7 @@ h2 {
 }
 .search-button, .btn-primary {
 	margin-left: 10px;
-	width:10%;
+	width: 10%;
     padding: 10px;
     background-color: #00488E;
     color: #ffffff;
@@ -60,9 +60,6 @@ h2 {
     font-size: 16px;
    	text-decoration: none;
    	transition: background-color 0.3s ease;    
-}
-.btn-primary{
-	width:200px;
 }
 .btn-secondary{
 	margin-left: 10px;
@@ -89,11 +86,11 @@ a:hover {
 
        
 .course-grid {
-	display: flex;
-	flex-wrap: wrap;
-    gap: 20px;
-    justify-content: flex-start;
-}
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: flex-start;
+        }
 
         .course-card {
             background-color: #f9f9f9;
@@ -144,13 +141,13 @@ a:hover {
 
         .btn-warning:hover, .btn-danger:hover {
             opacity: 0.8;
-        }  
-        
-.back-to-dashboard {
-	position: absolute;
-    top: 90px;    
-    color: #00488E;
-    cursor: pointer;
-    font-size: 1.5em; 
-    padding: 10px 15px;
+        }
+
+.progress {
+    height: 20px;
 }
+
+.progress-bar {
+    background-color: #007bff;
+}
+        

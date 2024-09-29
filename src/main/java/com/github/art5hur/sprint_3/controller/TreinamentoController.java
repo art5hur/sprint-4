@@ -1,16 +1,22 @@
 package com.github.art5hur.sprint_3.controller;
 
-import com.github.art5hur.sprint_3.controller.dto.FormTreinamento;
-import com.github.art5hur.sprint_3.model.Treinamento;
-import com.github.art5hur.sprint_3.repository.TreinamentoRepository;
-import com.github.art5hur.sprint_3.lov.ListOfValueBuilder;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
-import java.util.List;
+import com.github.art5hur.sprint_3.controller.dto.FormTreinamento;
+import com.github.art5hur.sprint_3.lov.ListOfValueBuilder;
+import com.github.art5hur.sprint_3.model.Treinamento;
+import com.github.art5hur.sprint_3.repository.TreinamentoRepository;
+import com.github.art5hur.sprint_3.service.TreinamentoService;
 
 @Controller
 @RequestMapping("treinamentos")
@@ -22,6 +28,11 @@ public class TreinamentoController {
     @Autowired
     private ListOfValueBuilder listOfValueBuilder;
 
+    @Autowired
+    private TreinamentoService treinamentoService;
+    
+    
+    
     @GetMapping()
     public String list(Model model) {
         List<Treinamento> treinamentos = treinamentoRepository.findAll(Sort.by(Sort.Direction.ASC, "nome"));
